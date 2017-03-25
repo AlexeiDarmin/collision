@@ -8,6 +8,37 @@ class App extends Component {
     return (
       <div className="App">
         <Vehicle />
+        <Vehicle />
+        <Vehicle />
+        <Vehicle />
+        <Vehicle />
+        <Vehicle />
+        <Vehicle />
+        <Vehicle />
+        <Vehicle />
+        <Vehicle />
+
+        <Vehicle />
+        <Vehicle />
+        <Vehicle />
+        <Vehicle />
+        <Vehicle />
+        <Vehicle />
+        <Vehicle />
+        <Vehicle />
+        <Vehicle />
+        <Vehicle />
+
+        <Vehicle />
+        <Vehicle />
+        <Vehicle />
+        <Vehicle />
+        <Vehicle />
+        <Vehicle />
+        <Vehicle />
+        <Vehicle />
+        <Vehicle />
+        <Vehicle />
       </div>
     );
   }

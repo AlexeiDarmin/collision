@@ -16,22 +16,13 @@ class Vehicle extends Component {
     }
   }
 
-  componentDidMount(){
-    this.setState({
-      styles: {
-        background: 'yellow',
-        // left: '100px',
-        position: 'absolute'
-      }
-    })
-  }
 
   render(){
     const { styles, health, direction, node } = this.state
 
     const saveSelf = (self) => {
       if (self && !node) {
-        setTimeout(() => game.startMoveVehicleLoop(self), 1)
+        setTimeout(() => game.startMoveVehicleLoop(self, direction), 1)
         this.setState({node: self})
         return null
       }
