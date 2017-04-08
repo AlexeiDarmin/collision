@@ -41,6 +41,12 @@ function moveVehicle(vehicle, direction) {
     vehicle.style.left = vehicle.offsetLeft - 1 + 'px'
   }
 
+  // changes directions if border of map has been reached by the vehicle.
+  if (direction == 0 && vehicle.offsetTop <= 0) direction = 2
+  else if (direction == 1 && vehicle.offsetLeft > 500) direction = 3
+  else if (direction == 2 && vehicle.offsetTop > 500) direction = 0
+  else if (direction == 3 && vehicle.offsetLeft <= 0) direction = 1
+
   setTimeout(() => moveVehicle(vehicle, direction), 16)
 }
 
