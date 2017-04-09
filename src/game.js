@@ -31,21 +31,21 @@ function moveVehicle(vehicle, direction) {
   // console.log('move vehicle', direction)
   // debugger
   // console.log(direction)
-  if (direction == 0) {            // up
+  if (direction === 0) {            // up
     vehicle.style.top = vehicle.offsetTop - 1 + 'px'
-  } else if (direction == 1) {     // right
+  } else if (direction === 1) {     // right
     vehicle.style.left = vehicle.offsetLeft + 1 + 'px'
-  } else if (direction == 2) {     // down
+  } else if (direction === 2) {     // down
     vehicle.style.top = vehicle.offsetTop + 1 + 'px'
-  } else if (direction == 3) {     // left
+  } else if (direction === 3) {     // left
     vehicle.style.left = vehicle.offsetLeft - 1 + 'px'
   }
 
   // changes directions if border of map has been reached by the vehicle.
-  if (direction == 0 && vehicle.offsetTop <= 0) direction = 2
-  else if (direction == 1 && vehicle.offsetLeft > 500) direction = 3
-  else if (direction == 2 && vehicle.offsetTop > 500) direction = 0
-  else if (direction == 3 && vehicle.offsetLeft <= 0) direction = 1
+  if (direction === 0 && vehicle.offsetTop <= 25) direction = 2
+  else if (direction === 1 && vehicle.offsetLeft > 500) direction = 3
+  else if (direction === 2 && vehicle.offsetTop > 500) direction = 0
+  else if (direction === 3 && vehicle.offsetLeft <= 25) direction = 1
 
   setTimeout(() => moveVehicle(vehicle, direction), 16)
 }

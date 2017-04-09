@@ -14,8 +14,19 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>React App</title>
+
+    <style>
+      div {
+        border-radius: 50%;
+      }
+    </style>
   </head>
   <body>
+    <script>
+    window.store = {
+      vehicles: []
+    }
+    </script>
     <div id="root"></div>
     <!--
       This HTML file is a template.
